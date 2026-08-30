@@ -1,0 +1,920 @@
+{
+ "api_layer_probes": [
+  {
+   "engine": "serper-google (Google SERP via Serper.dev)",
+   "ok": false,
+   "error": "{\"message\":\"Not enough credits\",\"statusCode\":400} — returned for both queries by all 3 available Serper API keys (SERPER_API_KEY b6c10a4a… in secrets.env, and both pool keys be221817…/9c400e63… in SERPER_API_KEYS). Retried after 5s, same error. Serper account(s) out of credits.",
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "top_results": [],
+     "named_companies": [],
+     "answer_summary": "请求失败（Not enough credits），无结果"
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "top_results": [],
+     "named_companies": [],
+     "answer_summary": "Request failed (Not enough credits), no results"
+    }
+   ]
+  },
+  {
+   "engine": "serpapi-google (Google SERP via SerpApi)",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "SERP含AI Overview但SerpApi仅返回page_token，取内容需第三次配额，为守住2次预算未取。自然结果由各GEO代理商自荐页+榜单页主导，OC Digital居首，First Page/OOm各推自家榜单。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Generative Engine Optimization Singapore | GEO Experts",
+       "url": "https://ocdigitalnetwork.com/generative-engine-optimization/",
+       "domain": "ocdigitalnetwork.com"
+      },
+      {
+       "rank": 2,
+       "title": "GEO Agency Singapore — Generative Engine Optimization",
+       "url": "https://aistudio.com.sg/services/geo-singapore.html",
+       "domain": "aistudio.com.sg"
+      },
+      {
+       "rank": 3,
+       "title": "8 Recommended GEO Agencies in Singapore (2026 Guide)",
+       "url": "https://www.gen-optima.com/geo/recommended-8-geo-agencies-singapore-evaluating-service-providers/",
+       "domain": "gen-optima.com"
+      },
+      {
+       "rank": 4,
+       "title": "Best GEO Agencies in Singapore (2026)",
+       "url": "https://www.firstpagedigital.sg/resources/ai-seo/best-geo-agencies-in-singapore/",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 5,
+       "title": "Best GEO / AEO Agencies in Singapore | AI Search Experts",
+       "url": "https://www.oom.com.sg/best-geo-aeo-agencies-singapore/",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 6,
+       "title": "AI SEO Agency Singapore | GEO & AI Search Optimisation",
+       "url": "https://awebstar.com.sg/ai-seo-agency-singapore.html",
+       "domain": "awebstar.com.sg"
+      },
+      {
+       "rank": 7,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg/",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 8,
+       "title": "AI SEO Singapore | Programmatic GEO + AEO",
+       "url": "https://www.bestmarketing.com.sg/services/geo-aeo/",
+       "domain": "bestmarketing.com.sg"
+      },
+      {
+       "rank": 9,
+       "title": "GEO Agency Singapore - AI Search Visibility",
+       "url": "https://kaliber.asia/geo-ai-search",
+       "domain": "kaliber.asia"
+      }
+     ],
+     "named_companies": [
+      "OC Digital",
+      "AI Studio Singapore",
+      "GenOptima 智推时代",
+      "First Page Digital",
+      "OOm Singapore",
+      "Hashmeta",
+      "PurpleClick Media",
+      "Impossible Marketing",
+      "Synscribe",
+      "WeFrameTech",
+      "AEO Agency",
+      "ThatWare",
+      "Brew Interactive",
+      "Awebstar",
+      "Performance Marketing Lab"
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "SERP含AI Overview但SerpApi仅返回page_token，取内容需第三次配额未取。自然结果为榜单混战：OC Digital自荐居首，MediaPlus/GenOptima/Synscribe/First Page各推自家为首的Top榜单。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Generative Engine Optimization Singapore | GEO Experts",
+       "url": "https://ocdigitalnetwork.com/generative-engine-optimization/",
+       "domain": "ocdigitalnetwork.com"
+      },
+      {
+       "rank": 2,
+       "title": "10 Best GEO Agencies in Singapore for AI Search Visibility ...",
+       "url": "https://mediaplus.com.sg/geo-agencies-in-singapore/",
+       "domain": "mediaplus.com.sg"
+      },
+      {
+       "rank": 3,
+       "title": "10 Best GEO Agencies in Singapore for AI Search (2026)",
+       "url": "https://www.gen-optima.com/geo/singapore-top-10-geo-agencies-2026-ai-search-visibility/",
+       "domain": "gen-optima.com"
+      },
+      {
+       "rank": 4,
+       "title": "GEO Agencies in Singapore",
+       "url": "https://digitalagencynetwork.com/agencies/singapore/geo/",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 5,
+       "title": "GEO Agency Singapore — Generative Engine Optimization",
+       "url": "https://aistudio.com.sg/services/geo-singapore.html",
+       "domain": "aistudio.com.sg"
+      },
+      {
+       "rank": 6,
+       "title": "Best GEO Agencies in Singapore (2026)",
+       "url": "https://www.firstpagedigital.sg/resources/ai-seo/best-geo-agencies-in-singapore/",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 7,
+       "title": "AI SEO Agency Singapore | GEO & AI Search Optimisation",
+       "url": "https://awebstar.com.sg/ai-seo-agency-singapore.html",
+       "domain": "awebstar.com.sg"
+      },
+      {
+       "rank": 8,
+       "title": "Top 10 AEO & GEO Companies in Singapore",
+       "url": "https://www.synscribe.com/blog/aeo-geo-companies-singapore",
+       "domain": "synscribe.com"
+      },
+      {
+       "rank": 9,
+       "title": "GEO Agency Singapore: Complete Guide for SMEs",
+       "url": "https://performancemarketinglab.sg/blog/geo-agency-singapore",
+       "domain": "performancemarketinglab.sg"
+      }
+     ],
+     "named_companies": [
+      "OC Digital",
+      "MediaPlus Digital Singapore",
+      "Hashmeta",
+      "Stridec",
+      "NEO360 Digital",
+      "OOm",
+      "MediaOne",
+      "GenOptima 智推时代",
+      "Digital Business Lab",
+      "Salween Group",
+      "AI Studio Singapore",
+      "First Page Digital",
+      "PurpleClick Media",
+      "Impossible Marketing",
+      "Synscribe"
+     ]
+    }
+   ]
+  },
+  {
+   "engine": "google-ai-mode (Google AI Mode via SerpApi)",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "生成式答案直接点名推荐5家：OOm（本土领头）、First Page Digital、Performance Marketing Lab（SME垂直+90天保证）、Single Grain（全球型）、Optimization Online（东南亚总部），并给出选商三维度。",
+     "named_companies": [
+      "OOm",
+      "First Page Digital",
+      "Performance Marketing Lab",
+      "Single Grain",
+      "Optimization Online",
+      "Digital Business Lab",
+      "Mediatropy",
+      "Harvest SEO"
+     ],
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Perplexity GEO & AEO Agency In Singapore",
+       "url": "https://www.firstpagedigital.sg/ai-seo/seo-perplexity/",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 2,
+       "title": "AI SEO Agency Singapore | Generative Engine Optimisation (GEO)",
+       "url": "https://www.oom.com.sg/generative-engine-optimisation-geo/",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 3,
+       "title": "GEO Agencies in Singapore",
+       "url": "https://digitalagencynetwork.com",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 4,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg/",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 5,
+       "title": "全球頂尖GEO/AI SEO 公司完整指南 - Tenten",
+       "url": "https://tenten.co",
+       "domain": "tenten.co"
+      },
+      {
+       "rank": 6,
+       "title": "AEO, GEO & SEO Agency in Singapore - Optimizacion Online",
+       "url": "https://www.optimizacion-online.com/singapore/",
+       "domain": "optimizacion-online.com"
+      },
+      {
+       "rank": 7,
+       "title": "Geo最全攻略：概念解析+Geo优化公司十强推荐2026年6月最新",
+       "url": "https://finance.ifeng.com",
+       "domain": "finance.ifeng.com"
+      },
+      {
+       "rank": 8,
+       "title": "2026 年Singapore最佳本地SEO公司",
+       "url": "https://agencies.semrush.com",
+       "domain": "agencies.semrush.com"
+      }
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "答案先区分两义：GEO营销类推荐OOm居首，其后First Page Digital、Impossible Marketing、Hashmeta、AD GUYS & CO；GIS类另列Esri Singapore等3家。注：rank 2/5/8的google.com/searchviewer链接curl跟跳仍返回google.com（HTTP 200非重定向），domain取答案正文中同一公司的真实站点域名。",
+     "named_companies": [
+      "OOm Pte Ltd",
+      "First Page Digital",
+      "Impossible Marketing",
+      "Hashmeta",
+      "AD GUYS & CO by Ulysses Wang",
+      "Esri Singapore",
+      "ST Engineering Geo-Insights",
+      "SkyMap Global Pte Ltd"
+     ],
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "AI SEO Agency Singapore | Generative Engine Optimisation (GEO) & AEO Experts",
+       "url": "https://www.oom.com.sg",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 2,
+       "title": "OOm Pte Ltd",
+       "url": "https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4TW1oc1pIbG9NREUYCg",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 3,
+       "title": "Top 88 Geospatial (Gis) Companies in Singapore (2026) | ensun",
+       "url": "https://ensun.io/search/geospatial-gis/singapore",
+       "domain": "ensun.io"
+      },
+      {
+       "rank": 4,
+       "title": "GEO Agency | Generative Engine Optimization - GEO Singapore",
+       "url": "https://hashmeta.com/capabilities/geo/",
+       "domain": "hashmeta.com"
+      },
+      {
+       "rank": 5,
+       "title": "Impossible Marketing",
+       "url": "https://www.google.com/searchviewer/10?svid=CAwSHBIaCgNwdnESE0Nnd3ZaeTh4TW1od04zRnljSGsYCg",
+       "domain": "impossible.sg"
+      },
+      {
+       "rank": 6,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 7,
+       "title": "Perplexity GEO & AEO Agency In Singapore",
+       "url": "https://www.firstpagedigital.sg",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 8,
+       "title": "First Page Digital",
+       "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVdkcWJUZGZmMnR0GAo",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 9,
+       "title": "AD GUYS & CO by Ulysses Wang",
+       "url": "https://www.google.com/searchviewer/10?svid=CAwSHRIbCgNwdnESFENnMHZaeTh4TVc0NGF6ZDNaMjV5GAo",
+       "domain": "adguysco.com"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "engine": "exa",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "Exa 无生成式答案，仅返回结果列表。前列为 Performance Marketing Lab、First Page Digital、OOM、PurpleClick 等新加坡 GEO/AI SEO 服务页；末两条为地质/打桩公司（GEO 字面误匹配）。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg/",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 2,
+       "title": "Perplexity GEO & AEO Agency In Singapore",
+       "url": "https://www.firstpagedigital.sg/ai-seo/seo-perplexity/",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 3,
+       "title": "AI SEO Agency Singapore | Generative Engine ...",
+       "url": "https://www.oom.com.sg/generative-engine-optimisation-geo/",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 4,
+       "title": "Next-Gen AI SEO: GEO & AEO Agency in Singapore",
+       "url": "https://www.purpleclick.com/generative-engine-optimization/",
+       "domain": "purpleclick.com"
+      },
+      {
+       "rank": 5,
+       "title": "GEO Agencies in Singapore",
+       "url": "https://digitalagencynetwork.com/agencies/singapore/geo/",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 6,
+       "title": "2026 年Singapore最佳本地SEO公司",
+       "url": "https://agencies.semrush.com/zh/list/local-seo/singapore/",
+       "domain": "agencies.semrush.com"
+      },
+      {
+       "rank": 7,
+       "title": "全球頂尖GEO/AI SEO 公司完整指南 - Tenten",
+       "url": "https://tenten.co/learning/top-geo-ai-seo-agencies/",
+       "domain": "tenten.co"
+      },
+      {
+       "rank": 8,
+       "title": "AEO, GEO & SEO Agency in Singapore",
+       "url": "https://www.optimizacion-online.com/singapore/",
+       "domain": "optimizacion-online.com"
+      },
+      {
+       "rank": 9,
+       "title": "NEPTUNE GEOPHYSICAL PTE. LD. - Email: Harry.huang@marigeo.com  Phone: +65 8869 4718",
+       "url": "https://marigeo.com/",
+       "domain": "marigeo.com"
+      },
+      {
+       "rank": 10,
+       "title": "PS Geotechnic Pte Ltd | Leading Micro Pile & Piling Contractors in Singapore",
+       "url": "https://psgeo.com.sg/",
+       "domain": "psgeo.com.sg"
+      }
+     ],
+     "named_companies": [
+      "Performance Marketing Lab",
+      "Tenten",
+      "NEPTUNE GEOPHYSICAL PTE. LD.",
+      "PS Geotechnic Pte Ltd"
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "Exa 无生成式答案，仅返回结果列表。全部为新加坡 GEO 服务商自有服务页，MediaOne 居首，其后为 AI Studio、SEO Expert、NOVASTACKS、Sibi Innovations、BThrust、Performance Marketing Lab、Taptwice Media 等。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "GEO Agency For ChatGPT & Google AI Overview In Singapore",
+       "url": "https://mediaonemarketing.com.sg/our-services/geo/",
+       "domain": "mediaonemarketing.com.sg"
+      },
+      {
+       "rank": 2,
+       "title": "GEO Agency Singapore — Generative Engine Optimization",
+       "url": "https://aistudio.com.sg/services/geo-singapore.html",
+       "domain": "aistudio.com.sg"
+      },
+      {
+       "rank": 3,
+       "title": "",
+       "url": "https://www.seoexpert.sg/geo",
+       "domain": "seoexpert.sg"
+      },
+      {
+       "rank": 4,
+       "title": "GEO Agency in Singapore - Get Recommended by AI | NOVASTACKS",
+       "url": "https://www.novastacks-ai.com/geo",
+       "domain": "novastacks-ai.com"
+      },
+      {
+       "rank": 5,
+       "title": "GEO Company in Singapore | GEO Services | Sibi Innovations",
+       "url": "https://sibiinnovations.com/generative-engine-optimization-geo-company-in-singapore/",
+       "domain": "sibiinnovations.com"
+      },
+      {
+       "rank": 6,
+       "title": "GEO Agency | Generative Engine Optimisation Singapore- BThrust",
+       "url": "https://www.bthrust.com/services/geo-seo-services/",
+       "domain": "bthrust.com"
+      },
+      {
+       "rank": 7,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg/",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 8,
+       "title": "Multi-award-winning AEO & GEO agency for Singapore — pure-play, enterprise-grade, APAC-ready | Taptwice Media",
+       "url": "https://taptwicemedia.com/offerings/international-aeo-geo/singapore/",
+       "domain": "taptwicemedia.com"
+      },
+      {
+       "rank": 9,
+       "title": "AI SEO Agency Singapore | Generative Engine ...",
+       "url": "https://www.oom.com.sg/generative-engine-optimisation-geo/",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 10,
+       "title": "GEO & AEO Singapore | Get Cited In ChatGPT & AI Overviews",
+       "url": "https://www.bestmarketing.com.sg/services/geo-aeo/",
+       "domain": "bestmarketing.com.sg"
+      }
+     ],
+     "named_companies": [
+      "NOVASTACKS",
+      "Sibi Innovations",
+      "BThrust",
+      "Performance Marketing Lab",
+      "Taptwice Media"
+     ]
+    }
+   ]
+  },
+  {
+   "engine": "tavily",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "生成式答案点名推荐 Tenten、Single Grain、First Page Sage 三家，称其提供先进 AI SEO 服务，兼顾传统与 AI 驱动搜索引擎优化；未给明确排序。",
+     "named_companies": [
+      "Tenten",
+      "Single Grain",
+      "First Page Sage",
+      "GVN Marketing",
+      "2Stallions",
+      "OOm",
+      "魯班（蓝色光标）",
+      "Impossible Marketing",
+      "Performance Marketing Lab",
+      "Optimizacion Online",
+      "百分点科技",
+      "森辰GEO",
+      "大树科技",
+      "珍岛集团",
+      "立本GEO"
+     ],
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Top GEO Agencies in Singapore for Generative Engine Optimization (2026)",
+       "url": "https://digitalagencynetwork.com/agencies/singapore/geo",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 2,
+       "title": "全球頂尖 GEO/AI SEO 公司完整指南",
+       "url": "https://tenten.co/learning/top-geo-ai-seo-agencies",
+       "domain": "tenten.co"
+      },
+      {
+       "rank": 3,
+       "title": "終極指南 - 最佳 GEO (生成式引擎優化) 代理商",
+       "url": "https://bluemediagroup.cn/luban/services/zh-Hant/top-5-geo-generative-engine-optimization-agencies",
+       "domain": "bluemediagroup.cn"
+      },
+      {
+       "rank": 4,
+       "title": "2026 年Singapore最佳本地SEO公司",
+       "url": "https://agencies.semrush.com/zh/list/local-seo/singapore",
+       "domain": "agencies.semrush.com"
+      },
+      {
+       "rank": 5,
+       "title": "Perplexity GEO & AEO Agency In Singapore",
+       "url": "https://www.firstpagedigital.sg/ai-seo/seo-perplexity",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 6,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 7,
+       "title": "AI SEO Agency Singapore | Generative Engine Optimisation (GEO) & Answer Engine Optimisation (AEO) Experts",
+       "url": "https://www.oom.com.sg/generative-engine-optimisation-geo",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 8,
+       "title": "AEO, GEO & SEO Agency in Singapore - Optimizacion Online",
+       "url": "https://www.optimizacion-online.com/singapore",
+       "domain": "optimizacion-online.com"
+      },
+      {
+       "rank": 9,
+       "title": "Geo最全攻略：概念解析+Geo优化公司十强推荐2026年6月最版+技术 ...",
+       "url": "https://finance.ifeng.com/c/8thiLdEzlTU",
+       "domain": "finance.ifeng.com"
+      },
+      {
+       "rank": 10,
+       "title": "認為我們無論是全鏈式、策略面到技術面都完勝，也都能清楚 ... - Facebook",
+       "url": "https://www.facebook.com/tangyaochung/photos/generative_engine_optimization-geo-vm_geo%E8%87%AA%E5%BE%9E1015%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%9C%A8%E5%8F%B0%E7%81%A3%E6%8E%A8%E5%87%BAgeo%E6%9C%8D%E5%8B%99%E5%BE%8C%E5%85%A9%E9%80%B1%E5%B7%A6%E5%8F%B3%E5%B8%B6%E4%BE%86%E4%BA%86%E8%A8%B1%E5%A4%9A%E7%B2%BE%E5%BD%A9%E7%9A%84%E5%B0%8D%E8%A9%B1%E8%88%87%E6%A5%B5%E4%BD%B3%E7%9A%84%E7%94%9F/10163404890190660",
+       "domain": "facebook.com"
+      }
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "生成式答案明确把 Impossible Marketing 排第一（多次获奖 SEO/AI SEO），其次提及 First Page Digital 和 Performance Marketing Lab，建议按需求和预算选择。引擎共返回 9 条结果。",
+     "named_companies": [
+      "Impossible Marketing",
+      "First Page Digital",
+      "Performance Marketing Lab",
+      "OOm",
+      "Hashmeta",
+      "SeekLab",
+      "G Cloud",
+      "Redot Global"
+     ],
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Perplexity GEO & AEO Agency In Singapore",
+       "url": "https://www.firstpagedigital.sg/ai-seo/seo-perplexity",
+       "domain": "firstpagedigital.sg"
+      },
+      {
+       "rank": 2,
+       "title": "Best SEO Companies in Singapore 2026 | Semrush",
+       "url": "https://agencies.semrush.com/list/seo/singapore",
+       "domain": "agencies.semrush.com"
+      },
+      {
+       "rank": 3,
+       "title": "Performance Marketing Lab: GEO Agency Singapore",
+       "url": "https://performancemarketinglab.sg",
+       "domain": "performancemarketinglab.sg"
+      },
+      {
+       "rank": 4,
+       "title": "Best Geo Agency In Singapore - Instagram",
+       "url": "https://www.instagram.com/popular/best-geo-agency-in-singapore",
+       "domain": "instagram.com"
+      },
+      {
+       "rank": 5,
+       "title": "GEO Agency | Generative Engine Optimization - GEO Singapore",
+       "url": "https://hashmeta.com/capabilities/geo",
+       "domain": "hashmeta.com"
+      },
+      {
+       "rank": 6,
+       "title": "AI SEO Agency Singapore | Generative Engine Optimisation ...",
+       "url": "https://www.oom.com.sg/generative-engine-optimisation-geo",
+       "domain": "oom.com.sg"
+      },
+      {
+       "rank": 7,
+       "title": "Top SEO Agencies in Singapore | 2026",
+       "url": "https://www.designrush.com/agency/search-engine-optimization/sg",
+       "domain": "designrush.com"
+      },
+      {
+       "rank": 8,
+       "title": "10 Best SEO Agencies in Singapore (2026): Services & Prices",
+       "url": "https://seowithsenthil.com/blog/seo-agencies-in-singapore",
+       "domain": "seowithsenthil.com"
+      },
+      {
+       "rank": 9,
+       "title": "Top SEO Agency in Singapore | Boost Your Traffic with Redot",
+       "url": "https://redot.global/seo-services",
+       "domain": "redot.global"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "engine": "gpt-search",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "把GEO解读为生成式引擎优化，给出10位排名榜：首推AI Studio，其次Stridec、Hashmeta，再列OOm、First Page Digital、MediaPlus、MediaOne、Digitrio、2Stallions、Brew/Construct，按客户类型分场景推荐（实际模型gpt-5.5-2026-04-23）。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "9 Best GEO Agencies in Singapore (2026) | AI Studio",
+       "url": "https://aistudio.com.sg/blog/best-geo-agencies-singapore.html",
+       "domain": "aistudio.com.sg"
+      },
+      {
+       "rank": 2,
+       "title": "5 Best Generative Engine Optimization Agencies in Singapore (2026)",
+       "url": "https://www.ranktracker.com/blog/best-generative-engine-optimization-agencies-singapore/",
+       "domain": "ranktracker.com"
+      },
+      {
+       "rank": 3,
+       "title": "GEO Agency | Generative Engine Optimization - GEO Singapore",
+       "url": "https://hashmeta.com/capabilities/geo/?utm_source=openai",
+       "domain": "hashmeta.com"
+      },
+      {
+       "rank": 4,
+       "title": "10 Best GEO Agencies in Singapore for AI Search Visibility (2026) - Web Design Singapore | Website Design & Development Agency",
+       "url": "https://mediaplus.com.sg/geo-agencies-in-singapore/",
+       "domain": "mediaplus.com.sg"
+      },
+      {
+       "rank": 5,
+       "title": "Top GEO Agencies in Singapore for Generative Engine Optimization (2026)",
+       "url": "https://digitalagencynetwork.com/agencies/singapore/geo/",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 6,
+       "title": "AI SEO & Generative Engine Optimization Singapore | Get Seen on AI",
+       "url": "https://digitrio.com.sg/generative-engine-optimization-agency/?utm_source=openai",
+       "domain": "digitrio.com.sg"
+      },
+      {
+       "rank": 7,
+       "title": "Top GEO Agencies in Singapore (2026): Who Is Actually Doing Generative Engine Optimisation - Stridec",
+       "url": "https://stridec.com/blog/top-geo-agencies-singapore/",
+       "domain": "stridec.com"
+      }
+     ],
+     "named_companies": [
+      "AI Studio",
+      "Stridec",
+      "Hashmeta",
+      "OOm",
+      "First Page Digital",
+      "MediaPlus Digital",
+      "MediaOne",
+      "Digitrio",
+      "2Stallions",
+      "Brew Interactive",
+      "Construct Digital"
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "首推MediaOne（中大型企业），10名榜依次为MediaOne、OOm、First Page Digital、Digitrio、2Stallions、Brew Interactive、MediaPlus、Impossible Marketing、PurpleClick、Canlah AI（第10，标注为纯GEO/AI visibility测试之选）。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "Top GEO Agencies in Singapore for Generative Engine Optimization (2026)",
+       "url": "https://digitalagencynetwork.com/agencies/singapore/geo/",
+       "domain": "digitalagencynetwork.com"
+      },
+      {
+       "rank": 2,
+       "title": "10 Best GEO Agencies in Singapore for AI Search Visibility (2026) - Web Design Singapore | Website Design & Development Agency",
+       "url": "https://mediaplus.com.sg/geo-agencies-in-singapore/",
+       "domain": "mediaplus.com.sg"
+      }
+     ],
+     "named_companies": [
+      "MediaOne",
+      "OOm",
+      "First Page Digital",
+      "Digitrio",
+      "2Stallions",
+      "Brew Interactive",
+      "MediaPlus Digital",
+      "Impossible Marketing",
+      "PurpleClick",
+      "Canlah AI"
+     ]
+    }
+   ]
+  },
+  {
+   "engine": "gemini-search",
+   "ok": true,
+   "queries": [
+    {
+     "lang": "cn",
+     "query": "新加坡最好的GEO公司",
+     "answer_summary": "把GEO理解为地理空间/岩土工程：推荐Esri Singapore、FlyPix AI、UNL（地理空间）与WSP（岩土），并提及SLA运营的GeoWorks产业中心；完全未涉及生成式引擎优化含义。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "esrisingapore.com.sg",
+       "url": "https://esrisingapore.com.sg/",
+       "domain": "esrisingapore.com.sg"
+      },
+      {
+       "rank": 2,
+       "title": "boustead.sg",
+       "url": "https://boustead.sg/geospatial",
+       "domain": "boustead.sg"
+      },
+      {
+       "rank": 3,
+       "title": "esrisingapore.com.sg",
+       "url": "https://esrisingapore.com.sg/gis-services",
+       "domain": "esrisingapore.com.sg"
+      },
+      {
+       "rank": 4,
+       "title": "flypix.ai",
+       "url": "https://flypix.ai/zh/geospatial-companies-in-singapore/",
+       "domain": "flypix.ai"
+      },
+      {
+       "rank": 5,
+       "title": "wsp.com",
+       "url": "https://www.wsp.com/zh-cn/services/geotechnical-and-ground-engineering",
+       "domain": "wsp.com"
+      },
+      {
+       "rank": 6,
+       "title": "gov.taipei",
+       "url": "https://epaper.land.gov.taipei/Item/Detail/推動新加坡地理空間產業的推手-GeoWorks",
+       "domain": "epaper.land.gov.taipei"
+      }
+     ],
+     "named_companies": [
+      "Esri Singapore",
+      "FlyPix AI",
+      "UNL",
+      "WSP",
+      "GeoWorks",
+      "Singapore Land Authority (SLA)"
+     ]
+    },
+    {
+     "lang": "en",
+     "query": "best GEO company in Singapore",
+     "answer_summary": "主体仍按地理空间公司作答（Esri Singapore领衔，列10家GIS/测绘公司），但末尾识别出生成式引擎优化含义，另推荐GVN Marketing、First Page Digital、2Stallions三家GEO营销机构。",
+     "top_results": [
+      {
+       "rank": 1,
+       "title": "flypix.ai",
+       "url": "https://flypix.ai/geospatial-companies-in-singapore/",
+       "domain": "flypix.ai"
+      },
+      {
+       "rank": 2,
+       "title": "ensun.io",
+       "url": "https://ensun.io/search/geospatial-gis/singapore",
+       "domain": "ensun.io"
+      },
+      {
+       "rank": 3,
+       "title": "esrisingapore.com.sg",
+       "url": "https://esrisingapore.com.sg/",
+       "domain": "esrisingapore.com.sg"
+      },
+      {
+       "rank": 4,
+       "title": "geospatialworld.net",
+       "url": "https://resource.geospatialworld.net/company/esri-singapore",
+       "domain": "resource.geospatialworld.net"
+      },
+      {
+       "rank": 5,
+       "title": "boustead.sg",
+       "url": "https://boustead.sg/geospatial",
+       "domain": "boustead.sg"
+      },
+      {
+       "rank": 6,
+       "title": "onegis.com.sg",
+       "url": "https://onegis.com.sg/en/",
+       "domain": "onegis.com.sg"
+      },
+      {
+       "rank": 7,
+       "title": "gpslands.com",
+       "url": "https://www.gpslands.com/",
+       "domain": "gpslands.com"
+      },
+      {
+       "rank": 8,
+       "title": "tracxn.com",
+       "url": "https://tracxn.com/d/explore/geographic-information-systems-services-startups-in-singapore/__uCUb_VN2ScSDmfadZvqPVQofnGcxjUq-WdkEqstsAWE",
+       "domain": "tracxn.com"
+      },
+      {
+       "rank": 9,
+       "title": "wisescan.com",
+       "url": "https://wisescan.com/about",
+       "domain": "wisescan.com"
+      },
+      {
+       "rank": 10,
+       "title": "geomaticslandsurveying.com",
+       "url": "https://geomaticslandsurveying.com/about/",
+       "domain": "geomaticslandsurveying.com"
+      }
+     ],
+     "named_companies": [
+      "Esri Singapore",
+      "FlyPix AI",
+      "EOfactory",
+      "Sovereign Solutions Pte Ltd",
+      "ST Engineering Geo-Insights",
+      "One GIS Pte Ltd",
+      "GPS Lands Singapore",
+      "Infotechgeo",
+      "Wisescan",
+      "Geomatics Land Surveying",
+      "Boustead Geospatial Group",
+      "GVN Marketing",
+      "First Page Digital",
+      "2Stallions"
+     ]
+    }
+   ]
+  }
+ ],
+ "chatgpt_consumer": {
+  "cn": {
+   "note": "answer body rendered in a canvas widget; only ordered citation chips extractable",
+   "citations": [
+    "https://stridec.com/blog/best-geo-agency-singapore/?utm_source=chatgpt.com",
+    "https://stridec.com/blog/best-geo-agency-singapore/?utm_source=chatgpt.com",
+    "https://canlah.ai/?utm_source=chatgpt.com",
+    "https://canlah.ai/zh/?utm_source=chatgpt.com",
+    "https://www.gen-optima.com/geo/singapore-top-10-geo-agencies-2026-ai-search-visibility/?utm_source=chatgpt.com",
+    "https://canlah.ai/?utm_source=chatgpt.com",
+    "https://www.oom.com.sg/generative-engine-optimisation-geo/?utm_source=chatgpt.com",
+    "https://www.oom.com.sg/best-geo-aeo-agencies-singapore/?utm_source=chatgpt.com",
+    "https://www.oom.com.sg/generative-engine-optimisation-geo/?utm_source=chatgpt.com",
+    "https://mediaplus.com.sg/ai-seo-services-singapore/?utm_source=chatgpt.com",
+    "https://mediaplus.com.sg/seo-singapore/?utm_source=chatgpt.com",
+    "https://mediaplus.com.sg/geo-agencies-in-singapore/?utm_source=chatgpt.com",
+    "https://aistudio.com.sg/services/geo-singapore.html?utm_source=chatgpt.com",
+    "https://aistudio.com.sg/services/ai-aeo-geo-agency-singapore.html?utm_source=chatgpt.com",
+    "https://mediaplus.com.sg/geo-agencies-in-singapore/?utm_source=chatgpt.com"
+   ],
+   "text_extracted": "代号：GEO5\nStridec\n+1\nStridec GEO介绍\nCANLAH AI\n+1\nCANLAH AI\nGenOptima\nCANLAH AI GEO\nOOm\nOOm\n+1\nOOm GEO Services\n新加坡网站设计\n新加坡网站设计\n新加坡网站设计\nAI Studio Singapore\n+1\nAI Studio Singapore\n新加坡网站设计\n+1"
+  },
+  "en": {
+   "answer_text": "Best GEO companies in Singapore — my 2026 shortlist\n\nBased on GEO specialization, measurement capability, methodology transparency, AI-engine coverage, SEO foundation, and publicly visible evidence, I’d shortlist these five:\n\nRank\tCompany\tWhy I’d recommend them\tBest for\n1\tStridec\tStrong SEO foundation + dedicated GEO methodology. They publicly describe a two-layer Trigger + Authority model and report actual AI citation outcomes rather than treating GEO as content SEO with a new name. \nStridec\n+1\n\tSerious SEO + GEO programmes\n2\tCANLAH AI\tOne of the more measurement-first GEO specialists I found. Uses locked buyer-query pools, repeated probes across ChatGPT/Gemini/Google/Perplexity, raw screenshots/timestamps, and explicitly publishes unsuccessful measurements as well as wins. \nCANLAH AI\n+1\n\tBrands wanting measurable AI visibility / GEO-first strategy\n3\tAI Studio\tAI-native positioning with GEO + AEO + SEO combined. Claims coverage across 5 major AI platforms and has developed its own AI visibility measurement methodology. \nAI Studio Singapore\n\tBroad multi-engine GEO coverage\n4\tOOm Singapore\tMuch more established digital agency with traditional SEO infrastructure plus GEO/AEO capability. A good option when you want SEO + GEO + broader digital marketing under one vendor. \nOOm\n+1\n\tEstablished SMEs / larger companies\n5\tMediaPlus Digital\tStronger traditional SEO/full-service foundation and has incorporated GEO/AEO into its offering. Less GEO-pure than the top three, but useful for SMEs wanting everything handled together. \n新加坡网站设计\n\tSingapore SMEs / full-service marketing\nMy picks by use case\n\n🥇 Best overall specialist: Stridec\n\nTheir advantage is the combination:\n\nTechnical SEO → Entity authority → GEO content → Citation tracking\n\nRather than treating GEO as merely writing \"AI-friendly\" articles. Their public AeroChat example claims a Google AI Overview citation ahead of larger competitors within three weeks. \nStridec\n\n🥈 Best measurement-first GEO company: CANLAH AI\n\nCANLAH has an interesting differentiation: it starts by asking:\n\n“When buyers ask AI about this category, exactly how often does the brand appear?”\n\nThen it locks those queries and re-runs them over time.\n\nThe public methodology includes ChatGPT, Gemini, Google AI Overviews and Perplexity, with query-level evidence, screenshots and timestamps, rather than only reporting traffic and Google rankings. \nCANLAH AI\n+1\n\nOne thing I particularly like from an evaluation perspective: CANLAH currently publishes that in one August 2026 internal test it appeared only 1/15 times, with its own site cited 0 times. That's actually a useful credibility signal because most agencies only publish successful examples. \nCANLAH AI\n\n🥉 Best AI-native alternative: AI Studio\n\nAI Studio combines:\n\nGEO + AEO + SEO + AI visibility monitoring\n\nand claims coverage of ChatGPT, Perplexity, Google AI Overviews, Gemini and Copilot. \nAI Studio Singapore\n\nOne important warning\n\nI wouldn't trust any existing “Top 10 GEO Agencies Singapore” ranking blindly.\n\nThis industry is still extremely young, and many of the current rankings are written by the agencies themselves: AI Studio ranks AI Studio #1; MediaPlus ranks MediaPlus #1; Stridec understandably presents strong evidence for Stridec. \nStridec\n+2\nAI Studio Singapore\n+2\n\nSo I'd evaluate agencies using four numbers:\n\nAI Mention Rate → AI Citation Rate → Share of Voice → Conversion/Revenue\n\nrather than:\n\narticles published → keywords → impressions.\n\nIf I were spending S$3k–10k/month of my own money, my first calls would therefore be Stridec, CANLAH AI and AI Studio and I'd ask each to perform the same 20–50 buyer-query benchmark before choosing.\n\nThat head-to-head test would tell you much more than any “best GEO agency” list.",
+   "citations": [
+    "https://stridec.com/blog/top-geo-agencies-singapore/?utm_source=chatgpt.com",
+    "https://canlah.ai/?utm_source=chatgpt.com",
+    "https://aistudio.com.sg/blog/best-geo-agencies-singapore.html?utm_source=chatgpt.com",
+    "https://www.oom.com.sg/best-geo-aeo-agencies-singapore/?utm_source=chatgpt.com",
+    "https://mediaplus.com.sg/geo-agencies-in-singapore/?utm_source=chatgpt.com",
+    "https://stridec.com/blog/best-geo-agency-singapore/?utm_source=chatgpt.com",
+    "https://canlah.ai/?utm_source=chatgpt.com",
+    "https://canlah.ai/?utm_source=chatgpt.com",
+    "https://aistudio.com.sg/blog/best-geo-agencies-singapore.html?utm_source=chatgpt.com",
+    "https://stridec.com/blog/best-geo-agency-singapore/?utm_source=chatgpt.com"
+   ]
+  }
+ }
+}

@@ -1,0 +1,499 @@
+[
+ {
+  "engine": "google-serp",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "The most basic relevance signal is literal keyword overlap between page content and the query.",
+    "source_name": "Google — How Search Works: Ranking results",
+    "source_url": "https://www.google.com/search/howsearchworks/how-search-works/ranking-results/",
+    "supporting_quote": "The most basic signal that information is relevant is when content contains the same keywords as your search query.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Exact sentence found verbatim on live Google How Search Works ranking page."
+   },
+   {
+    "claim": "Google detects local intent in queries and serves geographically relevant businesses without explicit location words.",
+    "source_name": "Google — How Search Works: Ranking results",
+    "source_url": "https://www.google.com/search/howsearchworks/how-search-works/ranking-results/",
+    "supporting_quote": "Our systems can also recognize many queries have a local intent. So when you search for 'pizza,' you get results about nearby businesses.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Local-intent and 'pizza' nearby-businesses sentences present verbatim on the same page."
+   },
+   {
+    "claim": "Core ranking rewards people-first content, defined against content made to manipulate rankings.",
+    "source_name": "Google Search Central — Creating helpful, reliable, people-first content",
+    "source_url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "supporting_quote": "People-first content means content that's created primarily for people, and not to manipulate search engine rankings.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "People-first definition found verbatim on live helpful-content documentation page."
+   },
+   {
+    "claim": "Automated systems look for signals of E-E-A-T (experience, expertise, authoritativeness, trustworthiness) to prioritize content.",
+    "source_name": "Google Search Central — Creating helpful, reliable, people-first content",
+    "source_url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "supporting_quote": "Our systems aim to prioritize those that seem most helpful by identifying factors that can help determine which content demonstrates aspects of experience, expertise, authoritativeness, and trustworthiness.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "E-E-A-T prioritization sentence present; quote is a faithful light paraphrase of live text."
+   },
+   {
+    "claim": "A dedicated reviews system evaluates 'best X' ranked lists and rewards original research over recycled summaries.",
+    "source_name": "Google Search Central — Google Search's reviews system",
+    "source_url": "https://developers.google.com/search/docs/appearance/reviews-system",
+    "supporting_quote": "The reviews system aims to better reward high quality reviews, which is content that provides insightful analysis and original research. ... Reviews can be head-to-head comparisons, or ranked-lists of recommendations.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Reviews system page live, no deprecation; rewards original research, covers ranked-lists and comparisons."
+   },
+   {
+    "claim": "Structured data confers rich-result eligibility only; Google explicitly disclaims any guarantee of display or ranking effect.",
+    "source_name": "Google Search Central — Structured data general guidelines",
+    "source_url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "supporting_quote": "Google does not guarantee that your structured data will show up in search results, even if your page is marked up correctly.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states no display guarantee; separately notes structured data eligibility distinct from web ranking."
+   },
+   {
+    "claim": "Freshness is applied per-query ('query deserves freshness'), not as a universal ranking requirement.",
+    "source_name": "Google Search Central — A guide to Google Search ranking systems",
+    "source_url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+    "supporting_quote": "Various 'query deserves freshness' systems designed to show fresher content for queries where it would be expected.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "'Query deserves freshness' per-query framing found verbatim in ranking systems guide."
+   },
+   {
+    "claim": "The site diversity system caps how many listings one domain can hold in top results.",
+    "source_name": "Google Search Central — A guide to Google Search ranking systems",
+    "source_url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+    "supporting_quote": "Generally won't show more than two web page listings from the same site in top results.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Site diversity two-listings-per-site cap found verbatim in ranking systems guide."
+   }
+  ]
+ },
+ {
+  "engine": "google-ai-mode",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "AI Mode decomposes the user question into multiple parallel sub-searches across different data sources (query fan-out), so cited pages come from many sub-query SERPs, not one ranking.",
+    "source_name": "Google (official blog), 'Expanding AI Overviews and introducing AI Mode'",
+    "source_url": "https://blog.google/products-and-platforms/products/search/ai-mode-search/",
+    "supporting_quote": "It uses a 'query fan-out' technique, issuing multiple related searches concurrently across subtopics and multiple data sources",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Google blog contains the exact query fan-out quote: concurrent related searches across subtopics and data sources."
+   },
+   {
+    "claim": "Beyond web pages, AI Mode grounds answers in Google's structured real-time systems — Knowledge Graph, real-world (local/business) info, and the Shopping Graph — i.e., entity data is a first-class source alongside web content.",
+    "source_name": "Google (official blog), 'Expanding AI Overviews and introducing AI Mode'",
+    "source_url": "https://blog.google/products-and-platforms/products/search/ai-mode-search/",
+    "supporting_quote": "tap into fresh, real-time sources like the Knowledge Graph, info about the real world, and shopping data for billions of products",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states verbatim: taps Knowledge Graph, real-world info, and shopping data for billions of products."
+   },
+   {
+    "claim": "Google's VP of Search describes AI Mode as literally re-running Google searches as a backend tool for each generated sub-question, with Google's internal real-time systems (Finance, flights, shopping catalog) wired in.",
+    "source_name": "Search Engine Journal, quoting Robby Stein (Google VP of Product, Search)",
+    "source_url": "https://www.searchenginejournal.com/query-fan-out-technique-in-ai-mode-new-details-from-google/552532/",
+    "supporting_quote": "it may think of a bunch of questions like great restaurants, great bars ... and it'll start Googling basically",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "SEJ quotes Stein: 'start Googling basically', plus Google Finance, flight data, 50B-product shopping catalog."
+   },
+   {
+    "claim": "Officially, no special markup, AI files, or optimizations gate inclusion; the only technical bar is being indexed and snippet-eligible, and standard SEO best practices apply.",
+    "source_name": "Google Search Central documentation, 'AI Features and Your Website'",
+    "source_url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "supporting_quote": "There are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Doc states verbatim no additional requirements; only bar is indexed and snippet-eligible."
+   },
+   {
+    "claim": "Google explicitly says its AI features surface a broader, more varied link set than classic results for the same query — which predicts low overlap with the traditional SERP.",
+    "source_name": "Google Search Central documentation, 'AI Features and Your Website'",
+    "source_url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "supporting_quote": "display a wider and more diverse set of helpful links",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Doc says AI features display a wider and more diverse set of helpful links via fan-out."
+   },
+   {
+    "claim": "Ahrefs (863K keywords, 4M AI Overview URLs) found only 38% of AI Overview citations rank in the head query's top 10 (down from ~76%), with ~31% ranking beyond position 100 — consistent with fan-out sourcing.",
+    "source_name": "Ahrefs blog, AI Overview citations study",
+    "source_url": "https://ahrefs.com/blog/ai-overview-citations-top-10",
+    "supporting_quote": "38% of pages cited in AI Overviews also rank in the top 10",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Ahrefs reports 37.9% in top 10 (vs ~76% July 2025), 31.0% beyond position 100, 863K keywords, 4M URLs."
+   },
+   {
+    "claim": "For local queries, AI Mode builds answers around business entities: cards with star ratings, review volumes, hours and pricing pulled from Google Business Profiles, supplemented by review sites and unstructured web citations.",
+    "source_name": "Whitespark, 'Guide to Google AI Mode for Local Businesses'",
+    "source_url": "https://whitespark.ca/guides/whitesparks-guide-to-googles-ai-mode-for-local-businesses/",
+    "supporting_quote": "summaries about businesses and information about star ratings, review volumes, pricing, hours of operation, and other basic facts pulled from Google Business Profiles or other sources",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Whitespark quote matches verbatim: ratings, review volumes, pricing, hours from Google Business Profiles plus cited sources."
+   },
+   {
+    "claim": "Pew Research (68,879 real user queries) found AI summary citations concentrate on a few platforms (Wikipedia/YouTube/Reddit = 15% of links) and links inside summaries are clicked in only 1% of visits.",
+    "source_name": "Pew Research Center, AI summaries browsing-behavior study",
+    "source_url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+    "supporting_quote": "Google users who encountered an AI summary also rarely clicked on a link in the summary itself. This occurred in just 1% of all visits",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Pew: 68,879 searches, Wikipedia/YouTube/Reddit 15% of sources, summary links clicked in just 1% of visits."
+   }
+  ]
+ },
+ {
+  "engine": "exa",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "Exa is an end-to-end transformer-based ('neural') search engine, not a keyword index.",
+    "source_name": "Exa Blog — Announcing Exa",
+    "source_url": "https://exa.ai/blog/announcing-exa",
+    "supporting_quote": "Exa, in contrast, is the first web-scale neural search engine. Our algorithm uses transformers end-to-end",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Blog states verbatim: first web-scale neural search engine, transformers end-to-end."
+   },
+   {
+    "claim": "Retrieval matches semantic meaning of the query, not lexical overlap.",
+    "source_name": "Exa Blog — Announcing Exa",
+    "source_url": "https://exa.ai/blog/announcing-exa",
+    "supporting_quote": "This enables us to filter the internet by meaning, not by keyword.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Blog states verbatim: filter the internet by meaning, not by keyword."
+   },
+   {
+    "claim": "The core retrieval objective is next-link prediction: given text, predict the relevant link.",
+    "source_name": "Exa Docs — FAQs",
+    "source_url": "https://docs.exa.ai/reference/faqs",
+    "supporting_quote": "Exa predicts specific links on the web given their relevance to a query.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "FAQs page (redirects to exa.ai/docs) states verbatim quote about predicting links by relevance."
+   },
+   {
+    "claim": "Exa's CEO describes the training objective as a 'neural PageRank' learned from how people share links in context.",
+    "source_name": "Latent Space podcast — Will Bryk (Exa CEO)",
+    "source_url": "https://www.latent.space/p/exa",
+    "supporting_quote": "The link prediction objective can be seen as like a neural PageRank ... you're predicting the links people share",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Latent Space transcript: Bryk calls link prediction 'like a neural PageRank', predicting links people share."
+   },
+   {
+    "claim": "type=auto is the default and routes each query to the best underlying search method (neural vs keyword).",
+    "source_name": "Exa Docs — Changelog: Auto search as default",
+    "source_url": "https://exa.ai/docs/changelog/auto-search-as-default",
+    "supporting_quote": "Auto search is now the default, automatically routing each query to the best search method.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Changelog entry states verbatim: auto search now default, routing each query to best method."
+   },
+   {
+    "claim": "Exa's index is deliberately curated and explicitly prioritizes company coverage as a first-class content category.",
+    "source_name": "Exa Docs — The Exa Index",
+    "source_url": "https://docs.exa.ai/reference/the-exa-index",
+    "supporting_quote": "Wide index of companies covered; also available are curated, customized company datasets",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page says 'high quality, curated index'; companies listed as category with 'Wide index of companies covered'."
+   },
+   {
+    "claim": "The index is refreshed on an hourly cycle from Exa's own crawler.",
+    "source_name": "Exa Docs — FAQs",
+    "source_url": "https://docs.exa.ai/reference/faqs",
+    "supporting_quote": "We update our index every hour, and are constantly adding batches of new links.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "FAQs state verbatim: index updated every hour, constantly adding batches of new links."
+   },
+   {
+    "claim": "Full pages are chunked and embedded with a paragraph-level model, so retrieval operates on embedded page content.",
+    "source_name": "Exa Blog — Announcing Exa",
+    "source_url": "https://exa.ai/blog/announcing-exa",
+    "supporting_quote": "Behind the scenes, we're chunking and embedding full webpages with a paragraph prediction model.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Blog states verbatim: chunking and embedding full webpages with a paragraph prediction model."
+   }
+  ]
+ },
+ {
+  "engine": "tavily",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "Tavily aggregates a bounded set of pages per call and uses its own AI model to score, filter and rank them against the query/task — not a curated editorial selection.",
+    "source_name": "Tavily Docs — About",
+    "source_url": "https://docs.tavily.com/documentation/about",
+    "supporting_quote": "The Tavily Search API aggregates up to 20 sites per a single API call, and uses proprietary AI to score, filter and rank the top most relevant sources and content to your task, query or goal.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "About page states verbatim: aggregates up to 20 sites, proprietary AI scores, filters, ranks."
+   },
+   {
+    "claim": "Results are ordered purely by a per-result relevance score between query and content; Tavily leaves thresholding to the caller, implying no engine-side quality/intent gate.",
+    "source_name": "Tavily Docs — Best Practices for Search",
+    "source_url": "https://docs.tavily.com/documentation/best-practices/best-practices-search",
+    "supporting_quote": "The score indicates relevance between query and content. Higher is better, but the ideal threshold depends on your use case.",
+    "verdict": "WEAK",
+    "verifier_reason": "Score/threshold quote verified, but 'purely' and 'no engine-side gate' extrapolate; About page says AI filters sources."
+   },
+   {
+    "claim": "The include_answer answer is LLM-generated on top of the returned search results (basic = quick, advanced = detailed), so only extractable cited content can enter the answer.",
+    "source_name": "Tavily Docs — Search API Reference",
+    "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+    "supporting_quote": "Include an LLM-generated answer to the provided query. basic or true returns a quick answer. advanced returns a more detailed answer.",
+    "verdict": "WEAK",
+    "verifier_reason": "Quote verified, but docs never say answer is grounded only in returned results; causal chain inferred."
+   },
+   {
+    "claim": "Retrieval is chunk-based: basic depth returns short snippets reranked by relevance to the query, so a single self-contained passage can win a citation.",
+    "source_name": "Tavily Docs — Best Practices for Search",
+    "source_url": "https://docs.tavily.com/documentation/best-practices/best-practices-search",
+    "supporting_quote": "short snippets reranked by relevance to your search query",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Best-practices page verbatim: basic depth returns chunks, short snippets reranked by relevance to query."
+   },
+   {
+    "claim": "The default topic=general mode is explicitly broad-source, which documents the wide candidate set (directories, media, social) we observed.",
+    "source_name": "Tavily Docs — Search API Reference",
+    "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+    "supporting_quote": "general is for broader, more general-purpose searches that may include a wide range of sources.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "API reference verbatim describes general topic as broader searches including a wide range of sources."
+   },
+   {
+    "claim": "Tavily runs its own crawling/indexing/caching retrieval stack rather than reselling a Google/Bing SERP.",
+    "source_name": "Tavily homepage",
+    "source_url": "https://www.tavily.com/",
+    "supporting_quote": "A production-grade retrieval stack with real-time search, intelligent caching, and indexing ... Billions of pages crawled and extracted without downtime.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Homepage verbatim: production-grade retrieval stack, caching, indexing, billions of pages crawled and extracted."
+   },
+   {
+    "claim": "Tavily's stated design objective is information density per millisecond, which trades away editorial source vetting for speed and coverage.",
+    "source_name": "Tavily Engineering Blog — How we built the fastest web search",
+    "source_url": "https://www.tavily.com/blog/how-we-built-the-fastest-web-search-in-the-world",
+    "supporting_quote": "From crawl selection, ranking, and synthesis to output structure, every design choice is guided by a single question: Does this increase the Information Density per millisecond we deliver?",
+    "verdict": "WEAK",
+    "verifier_reason": "Information-density-per-millisecond quote verified verbatim, but 'trades away editorial vetting' is unsupported inference."
+   },
+   {
+    "claim": "Independent measurement finds Tavily surfaces largely the same domain set as Google but reorders it with its own LLM-tuned relevance model — Google rank order does not transfer.",
+    "source_name": "cloro.dev technical analysis — Tavily vs Google Search",
+    "source_url": "https://cloro.dev/blog/tavily-vs-google-search/",
+    "supporting_quote": "80% of Google's top-10 domains also appeared somewhere in Tavily's results ... top-3 domain overlap was just 0.25 and rank correlation near zero.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "cloro.dev page reports 80% domain overlap, 0.25 top-3 overlap, near-zero rank correlation, own-model reranking."
+   }
+  ]
+ },
+ {
+  "engine": "gpt-search",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "The web_search tool hands the model results from a search backend and the model answers from the top results; reasoning models can iterate on searches.",
+    "source_name": "OpenAI API docs — Web search tool",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-web-search.md",
+    "supporting_quote": "The non-reasoning model sends the user's query to the web search tool, which returns the response based on top results.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states quote verbatim; reasoning models search iteratively within chain of thought."
+   },
+   {
+    "claim": "Inline citations are emitted as url_citation annotations carrying the cited page's URL, title, and character span.",
+    "source_name": "OpenAI API docs — Web search tool",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-web-search.md",
+    "supporting_quote": "The url_citation annotation object will contain the URL, title and location of the cited source.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Exact quote found: url_citation contains URL, title and location of cited source."
+   },
+   {
+    "claim": "Citations are a curated subset: the sources field lists every URL consulted, and is typically larger than the cited set.",
+    "source_name": "OpenAI API docs — Web search tool",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-web-search.md",
+    "supporting_quote": "Unlike inline citations, which show only the most relevant references, sources returns the complete list of URLs the model consulted.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states sources is complete list consulted, often greater than citation count."
+   },
+   {
+    "claim": "OAI-SearchBot is the dedicated search-surfacing crawler; robots.txt access to it gates whether a site can be cited in search answers.",
+    "source_name": "OpenAI docs — Bots and crawlers",
+    "source_url": "https://developers.openai.com/api/docs/bots",
+    "supporting_quote": "OAI-SearchBot is used to surface websites in search results in ChatGPT's search features.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Bots page: OAI-SearchBot surfaces sites in search; recommends allowing it in robots.txt."
+   },
+   {
+    "claim": "Sites that opt out of OAI-SearchBot are excluded from search answers (they may still appear as bare navigational links).",
+    "source_name": "OpenAI docs — Bots and crawlers",
+    "source_url": "https://developers.openai.com/api/docs/bots",
+    "supporting_quote": "Sites that are opted out of OAI-SearchBot will not be shown in ChatGPT search answers.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states opted-out sites excluded from answers but can appear as navigational links."
+   },
+   {
+    "claim": "Retrieval is built on external search indexes plus directly licensed publisher content, not a fully proprietary OpenAI index.",
+    "source_name": "OpenAI — Introducing ChatGPT search",
+    "source_url": "https://openai.com/index/introducing-chatgpt-search/",
+    "supporting_quote": "leverages third-party search providers, as well as content provided directly by our partners",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Quote verified via same-source corroboration; page blocked bots (403) but content matches."
+   },
+   {
+    "claim": "Microsoft Bing is a named third-party provider; disassociated queries are forwarded to it to fetch web results.",
+    "source_name": "OpenAI Help Center — Searching the web with ChatGPT",
+    "source_url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "supporting_quote": "may share disassociated search queries with the Bing search engine to return web results",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Help article quote corroborated: disassociated queries shared with Bing under Microsoft privacy policy."
+   },
+   {
+    "claim": "API callers can bias retrieval geographically via an approximate user location, and restrict retrieval with up to 100 allowed/blocked domains.",
+    "source_name": "OpenAI API docs — Web search tool",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-web-search.md",
+    "supporting_quote": "To refine search results based on geography, you can specify an approximate user location using country, city, region, and/or timezone.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page documents country/city/region/timezone location plus up to 100 allowed or blocked domains."
+   }
+  ]
+ },
+ {
+  "engine": "gemini-grounding",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "The model itself decides whether to search: it evaluates the prompt and only triggers Google Search if it judges retrieval would help.",
+    "source_name": "Google AI for Developers — Grounding with Google Search (Gemini API docs)",
+    "source_url": "https://ai.google.dev/gemini-api/docs/generate-content/google-search",
+    "supporting_quote": "The model analyzes the prompt and determines if a Google Search can improve the answer.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Live docs page contains the exact quoted sentence about model analyzing prompt and deciding."
+   },
+   {
+    "claim": "Search queries are generated by the model, not passed through verbatim from the user prompt — so intent disambiguation (e.g. GEO vs geospatial) happens inside the model's query-formulation step, with no documented safeguard.",
+    "source_name": "Google AI for Developers — Grounding with Google Search (Gemini API docs)",
+    "source_url": "https://ai.google.dev/gemini-api/docs/generate-content/google-search",
+    "supporting_quote": "If needed, the model automatically generates one or multiple search queries and executes them.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Exact quote on page; 'no documented safeguard' is accurate absence-inference, docs describe none."
+   },
+   {
+    "claim": "The model-generated queries are exposed in the API response as webSearchQueries, making the query-rewriting step directly auditable.",
+    "source_name": "Firebase AI Logic — Grounding with Google Search",
+    "source_url": "https://firebase.google.com/docs/ai-logic/grounding-google-search",
+    "supporting_quote": "An array of the search queries sent to Google Search. This information is useful for debugging and understanding the model's reasoning process.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Firebase page has verbatim quote including debugging/reasoning-process sentence for webSearchQueries."
+   },
+   {
+    "claim": "Citations are returned as groundingChunks (web sources with uri and title) plus groundingSupports that map answer text spans to those sources.",
+    "source_name": "Google AI for Developers — Grounding with Google Search (Gemini API docs)",
+    "source_url": "https://ai.google.dev/gemini-api/docs/generate-content/google-search",
+    "supporting_quote": "Each chunk links a text segment (defined by startIndex and endIndex) to one or more groundingChunkIndices.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Docs define groundingChunks (uri/title) and groundingSupports mapping segments via startIndex/endIndex/groundingChunkIndices verbatim."
+   },
+   {
+    "claim": "Cited URIs are not the source's canonical URL but Google-operated redirect links on vertexaisearch.cloud.google.com — a widely reported, unresolved developer pain point.",
+    "source_name": "googleapis/python-genai GitHub issue #1512",
+    "source_url": "https://github.com/googleapis/python-genai/issues/1512",
+    "supporting_quote": "all the URLs in the metadata are redirect links to vertexaisearch.cloud.google.com",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Issue #1512 exists, quote verbatim, unresolved; Firebase example responses corroborate vertexaisearch redirect URIs."
+   },
+   {
+    "claim": "The legacy dynamic-retrieval mode scored each prompt for grounding benefit against a configurable threshold (default 0.3); on current models this is superseded by the google_search tool where the model decides.",
+    "source_name": "Google Developers Blog — Gemini API and Google AI Studio now offer Grounding with Google Search",
+    "source_url": "https://developers.googleblog.com/en/gemini-api-and-ai-studio-now-offer-grounding-with-google-search/",
+    "supporting_quote": "The dynamic retrieval configuration assigns the prompt a prediction score, which is a floating point value between 0 and 1.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Blog confirms prediction score 0-1 and default 0.3; current docs corroborate google_search supersession."
+   },
+   {
+    "claim": "Current Gemini models (2.0+, incl. 2.5-flash) use the google_search tool; google_search_retrieval with dynamic threshold is legacy-only.",
+    "source_name": "Google AI for Developers — Grounding with Google Search (current docs)",
+    "source_url": "https://ai.google.dev/gemini-api/docs/google-search",
+    "supporting_quote": "Older models use a google_search_retrieval tool. For all current models, use the google_search tool as shown in the examples.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Current docs state verbatim: older models use google_search_retrieval, all current models use google_search."
+   },
+   {
+    "claim": "Independent instrumentation of Gemini grounding payloads found the model receives only SERP-level data (title, URL, snippet, query) per result — not full page content.",
+    "source_name": "Dejan.ai — Hacking Gemini (grounding payload analysis)",
+    "source_url": "https://dejan.ai/blog/hacking-gemini/",
+    "supporting_quote": "In short, Gemini sees url, title, query and snippet. It then generates that summary from it.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Dejan page exists; verbatim 'sees url, title, query and snippet', explicitly no page content."
+   }
+  ]
+ },
+ {
+  "engine": "chatgpt-consumer",
+  "verified_at": "2026-08-30",
+  "verifier": "independent LLM verifier, adversarial prompt (instructed to open each source URL and refute)",
+  "claims": [
+   {
+    "claim": "The consumer app fans a single user prompt out into one or more rewritten, targeted queries sent to external search providers.",
+    "source_name": "OpenAI Help Center — ChatGPT Search (retrieved via Wayback snapshot 2026-07-18)",
+    "source_url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "supporting_quote": "ChatGPT search typically rewrites your query into one or more targeted queries that it sends those providers.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Wayback snapshot contains verbatim sentence about rewriting query into one or more targeted queries sent to providers."
+   },
+   {
+    "claim": "The named third-party search providers behind ChatGPT search are Bing (Microsoft) and Shopify; retrieval is provider-backed, not a fully independent OpenAI index.",
+    "source_name": "OpenAI Help Center — ChatGPT Search (retrieved via Wayback snapshot 2026-07-18)",
+    "source_url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "supporting_quote": "For more information about how third-party search providers may further process search queries, please refer to: Bing (Microsoft's privacy policy), Shopify (Shopify's privacy policy)",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page names Bing and Shopify as third-party search providers verbatim; provider-backed retrieval directly documented."
+   },
+   {
+    "claim": "Account personalization is documented: with Memory enabled, stored memories are injected into the search-query rewrite step, so two logged-in accounts can issue different searches for the same prompt.",
+    "source_name": "OpenAI Help Center — ChatGPT Search (retrieved via Wayback snapshot 2026-07-18)",
+    "source_url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "supporting_quote": "when ChatGPT search rewrites your prompt into a search query it may also leverage relevant information from memories to make the query better and more useful",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Verbatim Memory quote present, plus vegan/San-Francisco example showing memory-personalized query rewrites."
+   },
+   {
+    "claim": "OpenAI states ranking is multi-factor with no guaranteed placement, and inclusion requires allowing the OAI-SearchBot crawler and its published IP ranges.",
+    "source_name": "OpenAI Help Center — ChatGPT Search (retrieved via Wayback snapshot 2026-07-18)",
+    "source_url": "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    "supporting_quote": "There is no way to guarantee top placement. However, to be included it is important to allow OAI-Searchbot to crawl your site",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Page states ranking uses many factors, no guaranteed placement, allow OAI-Searchbot and published IP addresses."
+   },
+   {
+    "claim": "At launch, ChatGPT search was described as a fine-tuned GPT-4o that composes answers from third-party search providers plus directly licensed partner content.",
+    "source_name": "OpenAI blog — Introducing ChatGPT search (Oct 31, 2024)",
+    "source_url": "https://openai.com/index/introducing-chatgpt-search/",
+    "supporting_quote": "ChatGPT search leverages third-party search providers, as well as content provided directly by our partners, to provide the information users are looking for.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Blog says fine-tuned GPT-4o and quotes third-party providers plus partner content verbatim."
+   },
+   {
+    "claim": "Outbound clicks from ChatGPT answers are tagged for attribution, giving sites a measurable referral signal in analytics.",
+    "source_name": "OpenAI Help Center — Publishers and Developers FAQ (retrieved via Wayback, 2026)",
+    "source_url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq",
+    "supporting_quote": "ChatGPT automatically includes the UTM parameter utm_source=chatgpt.com in referral URLs, enabling clear tracking and analysis of inbound traffic from ChatGPT search results.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "FAQ snapshot contains verbatim utm_source=chatgpt.com sentence enabling referral tracking in analytics."
+   },
+   {
+    "claim": "Search-surface eligibility is governed specifically by OAI-SearchBot, a distinct crawler from GPTBot (training) and ChatGPT-User (live user fetches, which do not affect search inclusion).",
+    "source_name": "OpenAI developer docs — Overview of OpenAI crawlers",
+    "source_url": "https://developers.openai.com/api/docs/bots",
+    "supporting_quote": "OAI-SearchBot is used to surface websites in search results in ChatGPT's search features.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Live docs: OAI-SearchBot quote verbatim; ChatGPT-User explicitly not used to determine search inclusion."
+   },
+   {
+    "claim": "The API web_search tool is a separate developer-facing surface that answers from top search results and returns citations as url_citation annotations — OpenAI does not document it as identical to the consumer app's search pipeline.",
+    "source_name": "OpenAI developer docs — Web search tool guide",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+    "supporting_quote": "The non-reasoning model sends the user's query to the web search tool, which returns the response based on top results.",
+    "verdict": "CONFIRMED",
+    "verifier_reason": "Live guide contains both quotes verbatim; no claim of parity with consumer app pipeline."
+   }
+  ]
+ }
+]

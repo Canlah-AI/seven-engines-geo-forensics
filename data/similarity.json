@@ -1,0 +1,415 @@
+{
+ "note": "domain matrices use top-10 result/citation domains; brand sets extracted from answer text/titles, normalized by lowercasing+strip non-alnum+drop 'pte ltd'/'singapore'",
+ "domain_jaccard_top10": {
+  "cn": {
+   "serpapi-google|google-ai-mode": 0.214,
+   "serpapi-google|exa": 0.188,
+   "serpapi-google|tavily": 0.188,
+   "serpapi-google|gpt-search": 0.067,
+   "serpapi-google|gemini-search": 0.0,
+   "serpapi-google|chatgpt-consumer": 0.25,
+   "google-ai-mode|exa": 0.636,
+   "google-ai-mode|tavily": 0.8,
+   "google-ai-mode|gpt-search": 0.071,
+   "google-ai-mode|gemini-search": 0.0,
+   "google-ai-mode|chatgpt-consumer": 0.077,
+   "exa|tavily": 0.538,
+   "exa|gpt-search": 0.062,
+   "exa|gemini-search": 0.0,
+   "exa|chatgpt-consumer": 0.067,
+   "tavily|gpt-search": 0.062,
+   "tavily|gemini-search": 0.0,
+   "tavily|chatgpt-consumer": 0.067,
+   "gpt-search|gemini-search": 0.0,
+   "gpt-search|chatgpt-consumer": 0.3,
+   "gemini-search|chatgpt-consumer": 0.0
+  },
+  "en": {
+   "serpapi-google|google-ai-mode": 0.143,
+   "serpapi-google|exa": 0.118,
+   "serpapi-google|tavily": 0.125,
+   "serpapi-google|gpt-search": 0.222,
+   "serpapi-google|gemini-search": 0.0,
+   "serpapi-google|chatgpt-consumer": 0.167,
+   "google-ai-mode|exa": 0.133,
+   "google-ai-mode|tavily": 0.333,
+   "google-ai-mode|gpt-search": 0.0,
+   "google-ai-mode|gemini-search": 0.062,
+   "google-ai-mode|chatgpt-consumer": 0.091,
+   "exa|tavily": 0.118,
+   "exa|gpt-search": 0.0,
+   "exa|gemini-search": 0.0,
+   "exa|chatgpt-consumer": 0.154,
+   "tavily|gpt-search": 0.0,
+   "tavily|gemini-search": 0.0,
+   "tavily|chatgpt-consumer": 0.077,
+   "gpt-search|gemini-search": 0.0,
+   "gpt-search|chatgpt-consumer": 0.167,
+   "gemini-search|chatgpt-consumer": 0.0
+  }
+ },
+ "engine_domains_top10": {
+  "serpapi-google": {
+   "cn": [
+    "ocdigitalnetwork.com",
+    "aistudio.com.sg",
+    "gen-optima.com",
+    "firstpagedigital.sg",
+    "oom.com.sg",
+    "awebstar.com.sg",
+    "performancemarketinglab.sg",
+    "bestmarketing.com.sg",
+    "kaliber.asia"
+   ],
+   "en": [
+    "ocdigitalnetwork.com",
+    "mediaplus.com.sg",
+    "gen-optima.com",
+    "digitalagencynetwork.com",
+    "aistudio.com.sg",
+    "firstpagedigital.sg",
+    "awebstar.com.sg",
+    "synscribe.com",
+    "performancemarketinglab.sg"
+   ]
+  },
+  "google-ai-mode": {
+   "cn": [
+    "firstpagedigital.sg",
+    "oom.com.sg",
+    "digitalagencynetwork.com",
+    "performancemarketinglab.sg",
+    "tenten.co",
+    "optimizacion-online.com",
+    "finance.ifeng.com",
+    "agencies.semrush.com"
+   ],
+   "en": [
+    "oom.com.sg",
+    "ensun.io",
+    "hashmeta.com",
+    "impossible.sg",
+    "performancemarketinglab.sg",
+    "firstpagedigital.sg",
+    "adguysco.com"
+   ]
+  },
+  "exa": {
+   "cn": [
+    "performancemarketinglab.sg",
+    "firstpagedigital.sg",
+    "oom.com.sg",
+    "purpleclick.com",
+    "digitalagencynetwork.com",
+    "agencies.semrush.com",
+    "tenten.co",
+    "optimizacion-online.com",
+    "marigeo.com",
+    "psgeo.com.sg"
+   ],
+   "en": [
+    "mediaonemarketing.com.sg",
+    "aistudio.com.sg",
+    "seoexpert.sg",
+    "novastacks-ai.com",
+    "sibiinnovations.com",
+    "bthrust.com",
+    "performancemarketinglab.sg",
+    "taptwicemedia.com",
+    "oom.com.sg",
+    "bestmarketing.com.sg"
+   ]
+  },
+  "tavily": {
+   "cn": [
+    "digitalagencynetwork.com",
+    "tenten.co",
+    "bluemediagroup.cn",
+    "agencies.semrush.com",
+    "firstpagedigital.sg",
+    "performancemarketinglab.sg",
+    "oom.com.sg",
+    "optimizacion-online.com",
+    "finance.ifeng.com",
+    "facebook.com"
+   ],
+   "en": [
+    "firstpagedigital.sg",
+    "agencies.semrush.com",
+    "performancemarketinglab.sg",
+    "instagram.com",
+    "hashmeta.com",
+    "oom.com.sg",
+    "designrush.com",
+    "seowithsenthil.com",
+    "redot.global"
+   ]
+  },
+  "gpt-search": {
+   "cn": [
+    "aistudio.com.sg",
+    "ranktracker.com",
+    "hashmeta.com",
+    "mediaplus.com.sg",
+    "digitalagencynetwork.com",
+    "digitrio.com.sg",
+    "stridec.com"
+   ],
+   "en": [
+    "digitalagencynetwork.com",
+    "mediaplus.com.sg"
+   ]
+  },
+  "gemini-search": {
+   "cn": [
+    "esrisingapore.com.sg",
+    "boustead.sg",
+    "flypix.ai",
+    "sp.com",
+    "epaper.land.gov.taipei"
+   ],
+   "en": [
+    "flypix.ai",
+    "ensun.io",
+    "esrisingapore.com.sg",
+    "resource.geospatialworld.net",
+    "boustead.sg",
+    "onegis.com.sg",
+    "gpslands.com",
+    "tracxn.com",
+    "isescan.com",
+    "geomaticslandsurveying.com"
+   ]
+  },
+  "chatgpt-consumer": {
+   "cn": [
+    "stridec.com",
+    "canlah.ai",
+    "gen-optima.com",
+    "oom.com.sg",
+    "mediaplus.com.sg",
+    "aistudio.com.sg"
+   ],
+   "en": [
+    "stridec.com",
+    "canlah.ai",
+    "aistudio.com.sg",
+    "oom.com.sg",
+    "mediaplus.com.sg"
+   ]
+  }
+ },
+ "answer_engine_named_companies": {
+  "gpt-search": {
+   "cn": [
+    "AI Studio",
+    "Stridec",
+    "Hashmeta",
+    "OOm",
+    "First Page Digital",
+    "MediaPlus Digital",
+    "MediaOne",
+    "Digitrio",
+    "2Stallions",
+    "Brew Interactive",
+    "Construct Digital"
+   ],
+   "en": [
+    "MediaOne",
+    "OOm",
+    "First Page Digital",
+    "Digitrio",
+    "2Stallions",
+    "Brew Interactive",
+    "MediaPlus Digital",
+    "Impossible Marketing",
+    "PurpleClick",
+    "Canlah AI"
+   ]
+  },
+  "google-ai-mode": {
+   "cn": [
+    "OOm",
+    "First Page Digital",
+    "Performance Marketing Lab",
+    "Single Grain",
+    "Optimizacion Online",
+    "Digital Business Lab",
+    "Mediatropy",
+    "Harvest SEO"
+   ],
+   "en": [
+    "OOm",
+    "First Page Digital",
+    "Impossible Marketing",
+    "Hashmeta",
+    "AD GUYS & CO"
+   ]
+  },
+  "tavily-answer": {
+   "cn": [
+    "Tenten",
+    "Single Grain",
+    "First Page Sage"
+   ],
+   "en": [
+    "Impossible Marketing",
+    "First Page Digital",
+    "Performance Marketing Lab"
+   ]
+  },
+  "gemini-search": {
+   "cn": [
+    "Esri Singapore",
+    "FlyPix AI",
+    "UNL",
+    "WSP"
+   ],
+   "en": [
+    "Esri Singapore",
+    "FlyPix AI",
+    "GVN Marketing",
+    "First Page Digital",
+    "2Stallions"
+   ]
+  },
+  "chatgpt-consumer": {
+   "cn": [
+    "Stridec",
+    "Canlah AI",
+    "GenOptima",
+    "OOm",
+    "MediaPlus Digital",
+    "AI Studio"
+   ],
+   "en": [
+    "Stridec",
+    "Canlah AI",
+    "AI Studio",
+    "OOm",
+    "MediaPlus Digital"
+   ]
+  }
+ },
+ "brand_jaccard_answer_engines": {
+  "cn": {
+   "gpt-search|google-ai-mode": {
+    "jaccard": 0.118,
+    "common": [
+     "firstpagedigital",
+     "oom"
+    ]
+   },
+   "gpt-search|tavily-answer": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "gpt-search|gemini-search": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "gpt-search|chatgpt-consumer": {
+    "jaccard": 0.308,
+    "common": [
+     "aistudio",
+     "mediaplusdigital",
+     "oom",
+     "stridec"
+    ]
+   },
+   "google-ai-mode|tavily-answer": {
+    "jaccard": 0.1,
+    "common": [
+     "singlegrain"
+    ]
+   },
+   "google-ai-mode|gemini-search": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "google-ai-mode|chatgpt-consumer": {
+    "jaccard": 0.077,
+    "common": [
+     "oom"
+    ]
+   },
+   "tavily-answer|gemini-search": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "tavily-answer|chatgpt-consumer": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "gemini-search|chatgpt-consumer": {
+    "jaccard": 0.0,
+    "common": []
+   }
+  },
+  "en": {
+   "gpt-search|google-ai-mode": {
+    "jaccard": 0.25,
+    "common": [
+     "firstpagedigital",
+     "impossiblemarketing",
+     "oom"
+    ]
+   },
+   "gpt-search|tavily-answer": {
+    "jaccard": 0.182,
+    "common": [
+     "firstpagedigital",
+     "impossiblemarketing"
+    ]
+   },
+   "gpt-search|gemini-search": {
+    "jaccard": 0.154,
+    "common": [
+     "2stallions",
+     "firstpagedigital"
+    ]
+   },
+   "gpt-search|chatgpt-consumer": {
+    "jaccard": 0.25,
+    "common": [
+     "canlahai",
+     "mediaplusdigital",
+     "oom"
+    ]
+   },
+   "google-ai-mode|tavily-answer": {
+    "jaccard": 0.333,
+    "common": [
+     "firstpagedigital",
+     "impossiblemarketing"
+    ]
+   },
+   "google-ai-mode|gemini-search": {
+    "jaccard": 0.111,
+    "common": [
+     "firstpagedigital"
+    ]
+   },
+   "google-ai-mode|chatgpt-consumer": {
+    "jaccard": 0.111,
+    "common": [
+     "oom"
+    ]
+   },
+   "tavily-answer|gemini-search": {
+    "jaccard": 0.143,
+    "common": [
+     "firstpagedigital"
+    ]
+   },
+   "tavily-answer|chatgpt-consumer": {
+    "jaccard": 0.0,
+    "common": []
+   },
+   "gemini-search|chatgpt-consumer": {
+    "jaccard": 0.0,
+    "common": []
+   }
+  }
+ }
+}

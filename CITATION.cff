@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this study or dataset, please cite it as below."
+title: "Same Question, Seven Engines: What Each AI Search Engine Cited — and Working Hypotheses for Targeting Each"
+authors:
+  - name: "Canlah Research"
+    website: "https://canlah.ai"
+date-released: "2026-08-30"
+version: "1.0"
+license: CC-BY-4.0
+repository-code: "https://github.com/Canlah-AI/seven-engines-geo-forensics"
+keywords:
+  - generative engine optimization
+  - GEO
+  - AI search
+  - search engine citations
+  - source forensics
