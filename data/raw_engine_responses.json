@@ -3,7 +3,7 @@
   {
    "engine": "serper-google (Google SERP via Serper.dev)",
    "ok": false,
-   "error": "{\"message\":\"Not enough credits\",\"statusCode\":400} — returned for both queries by all 3 available Serper API keys (SERPER_API_KEY b6c10a4a… in secrets.env, and both pool keys be221817…/9c400e63… in SERPER_API_KEYS). Retried after 5s, same error. Serper account(s) out of credits.",
+   "error": "{\"message\":\"Not enough credits\",\"statusCode\":400} — returned for both queries by all three Serper API keys available at collection time. Retried after 5s, same error. All Serper accounts were out of credits, so this probe returned no data for this run.",
    "queries": [
     {
      "lang": "cn",
