@@ -2,7 +2,7 @@
 
 **A source-forensics case study for Generative Engine Optimization (GEO)**
 
-Canlah Research · Singapore · 2026-08-30 · v1.0 · License: CC BY 4.0 · Data, prompts, and classification code in this repository
+Canlah Research · Singapore · 2026-08-30 (v1.0) · 2026-08-31 (v1.1: logged-out ChatGPT replication, §3a) · License: CC BY 4.0 · Data, prompts, and classification code in this repository
 
 ---
 
@@ -39,7 +39,7 @@ This is **one query, one night, one locale** — a forensic case study with a me
 5. **Reverse-engineer** — an independent model analyzed the evidence folder and produced per-engine observations, labeled *observed* vs *inferred*; the four most surprising claims were manually re-checked against raw HTML.
 6. **Document-layer cross-check** — for each engine we collected up to 8 claims about its retrieval mechanism from primary sources (official docs, engineering blogs, credible research), then an adversarial verifier opened every cited source and judged whether it supports the claim. Verdicts with reasons: [`data/claim_verification.json`](data/claim_verification.json).
 
-**What this study is not.** It is not a statistical survey (n = 1 query × 1 night × 1 locale × 2 languages); AI-answer output is known to vary run-to-run, so every number is one snapshot. Result lists (traditional engines) and citation lists (answer engines) are related but not identical units. Documented mechanisms cannot prove that a mechanism *caused* this run's output — alignment between the two is stated as consistency, not causation. The ChatGPT consumer probe ran on a logged-in account whose personalization/memory could not be fully ruled out; its observations are corroborated where possible but its specific vendor picks should not be quoted as neutral (see also §6 — that run cited our own site). And several cited "rankings" are published by ranked vendors; we label these rather than exclude them, because in this run the engines did not exclude them either.
+**What this study is not.** It is not a statistical survey (n = 1 query × 1 night × 1 locale × 2 languages); AI-answer output is known to vary run-to-run, so every number is one snapshot. Result lists (traditional engines) and citation lists (answer engines) are related but not identical units. Documented mechanisms cannot prove that a mechanism *caused* this run's output — alignment between the two is stated as consistency, not causation. The ChatGPT consumer probe ran on a logged-in account whose personalization/memory could not be fully ruled out; its observations are corroborated where possible but its specific vendor picks should not be quoted as neutral (see also §6 — that run cited our own site). **v1.1 adds a logged-out replication of that probe (§3a).** And several cited "rankings" are published by ranked vendors; we label these rather than exclude them, because in this run the engines did not exclude them either.
 
 ## 3. Findings from this run
 
@@ -48,6 +48,18 @@ This is **one query, one night, one locale** — a forensic case study with a me
 3. **Self-published "Best X" listicles were taken up by exactly three surfaces in this run:** OpenAI web_search (3/9 citations), ChatGPT consumer (6/17), and Google organic (4/18 — top-10 entries, never #1). Zero uptake by Exa, Tavily, Google AI Mode, or Gemini. No engine visibly filtered the conflict of interest: every self-listicle we captured ranks its publisher first, and was cited anyway.
 4. **Structured data correlated with citation, and guarantees nothing.** 17/17 ChatGPT-cited and 16/18 Google-cited records carried JSON-LD — but AI Mode and Gemini also cited schema-free pages, bot-challenged pages, and one 404. Google's own documentation disclaims any guarantee. Treat schema as hygiene.
 5. **Word-sense disambiguation decided one engine entirely.** Gemini grounding resolved "GEO" to geospatial/GIS in both languages (16/16 sources), including pages updated days before the probe — freshness did not rescue the lost word-sense. If your category term is ambiguous, resolving the ambiguity on-page (full phrase, AI-search context terms) looks like a precondition for competing at all.
+
+## 3a. Replication note (v1.1, 2026-08-31): the ChatGPT consumer probe, logged out
+
+The main study's weakest link was the logged-in ChatGPT probe. Two days later we re-ran the same two prompts on chatgpt.com **logged out** (incognito window, no account, web-search chip enabled, same machine and Singapore egress). Because of a submission glitch the prompts were sent repeatedly inside one conversation per language, which yielded 3 Chinese and 5 English answers (later runs see earlier turns as context — a limitation, stated as such). Full text of every answer, the business cards shown, and the brand sets are in [`data/replication_logged_out.json`](data/replication_logged_out.json).
+
+What the logged-out surface did differently:
+
+- **A Places-style layer appeared first.** Every logged-out answer opened with a map (Mapbox tiles) and 11–15 rated business cards *before* any prose — a layer the logged-in probe did not show. The cards were drawn from a local-business index (★ ratings, category labels such as “营销机构 / 互联网营销服务”) and were only loosely tied to the query: in 4 of 8 runs they included geotechnical/geospatial firms (e.g. “Geoapplication Engineers”, “Ground Instrumentation & Engineering”) — the same GEO→geospatial word-sense leak we saw in Gemini, now inside ChatGPT's entity layer. OC Digital, OOm, First Page Digital and Tomo Digital appeared on the cards in every run.
+- **The prose shortlist was more stable than the cited pages had been.** Mean pairwise brand-level Jaccard across runs: 0.70 (EN, 5 runs) and 0.54 (CN, 3 runs). AI Studio, Stridec, OOm, MediaPlus and OC Digital were named in 5/5 English runs; AI Studio, MediaOne, Hashmeta and Stridec in 3/3 Chinese runs.
+- **Our own brand, logged out:** Canlah AI was named in 3 of 5 English answers (in one of them among the final three picks) and in **0 of 3 Chinese answers**. This partially retires the personalization caveat on the English side — the logged-in English citation was not an artifact of account memory — and confirms the Chinese-side absence. It also shows the run-to-run variance we warned about: the same brand was present in 60% of English runs, not 100%.
+
+Implication for the per-engine reading in §4.5: the logged-in and logged-out ChatGPT surfaces are not the same engine. Logged out, ChatGPT behaved more like Google AI Mode (entity cards first, then supporting prose); logged in, it behaved like a deep-citation engine. Anyone measuring “ChatGPT visibility” should state which surface they measured.
 
 ## 4. Per-engine: what it cited, what its documentation says, and what to test
 
@@ -335,6 +347,7 @@ This is **one query, one night, one locale** — a forensic case study with a me
 | [`data/page_dossiers.json`](data/page_dossiers.json) | Per-page structural profile: title, JSON-LD types, H2/H3 headings, entity mentions, dates, listicle flag, word count |
 | [`data/similarity.json`](data/similarity.json) | Pairwise domain-Jaccard matrices (CN/EN), per-engine domain lists, named-company sets and brand-level Jaccard for answer engines |
 | [`data/claim_verification.json`](data/claim_verification.json) | All 56 documented-mechanism claims with source URLs, supporting quotes, adversarial verdicts and verifier reasons |
+| [`data/replication_logged_out.json`](data/replication_logged_out.json) | v1.1: 8 logged-out ChatGPT answers (3 CN, 5 EN) with full text, business cards shown, brand sets, and run-to-run stability stats |
 | [`data/raw_engine_responses.json`](data/raw_engine_responses.json) | Raw per-engine outputs: result lists, citations, answer summaries; ChatGPT consumer answer text and ordered citation chips |
 | [`method/probes.md`](method/probes.md) | Verbatim queries and per-engine call specification |
 | [`scripts/classify.py`](scripts/classify.py) | Frozen page-type codebook and URL normalization (the exact code that produced every label and count above) |
@@ -343,9 +356,9 @@ With these files you can recompute every derived statistic in this paper. What y
 
 ## 6. Disclosure & conflicts
 
-Canlah Research is the research arm of **Canlah AI Pte. Ltd.**, a Singapore GEO vendor — we are a participant in the market this case study measures. Precisely: in this run, the brand "Canlah AI" was **named** in the answers of two engines (OpenAI web_search API; ChatGPT consumer); **canlah.ai itself was cited by one engine** (ChatGPT consumer — the probe carrying the personalization caveat in §2); and Canlah appeared at rank 6 on one competitor-published list. It did not appear in the outputs of the other engines. We publish the losses with the wins; the asymmetry is itself evidence for the per-engine thesis.
+Canlah Research is the research arm of **Canlah AI Pte. Ltd.**, a Singapore GEO vendor — we are a participant in the market this case study measures. Precisely: in this run, the brand "Canlah AI" was **named** in the answers of two engines (OpenAI web_search API; ChatGPT consumer); **canlah.ai itself was cited by one engine** (ChatGPT consumer — the probe carrying the personalization caveat in §2); and Canlah appeared at rank 6 on one competitor-published list. It did not appear in the outputs of the other engines. In the v1.1 logged-out ChatGPT replication (§3a) Canlah AI was named in 3/5 English and 0/3 Chinese answers. We publish the losses with the wins; the asymmetry is itself evidence for the per-engine thesis.
 
-Process disclosure: the query was chosen by Canlah (it is the query class we and our competitors sell against); page-type labels were produced by the published deterministic script, not by hand; there was no independent second annotator (stated as a limitation); the initial classifier had a bug that mislabeled one competitor's self-ranked lists as third-party — it was caught in pre-publication review, fixed in `scripts/classify.py`, and all numbers here reflect the corrected labels. The ChatGPT consumer account's memory state was not reset before probing; a clean-account replication is the first follow-up we would run.
+Process disclosure: the query was chosen by Canlah (it is the query class we and our competitors sell against); page-type labels were produced by the published deterministic script, not by hand; there was no independent second annotator (stated as a limitation); the initial classifier had a bug that mislabeled one competitor's self-ranked lists as third-party — it was caught in pre-publication review, fixed in `scripts/classify.py`, and all numbers here reflect the corrected labels. The ChatGPT consumer account's memory state was not reset before probing; the logged-out replication in §3a is the follow-up, and it is itself limited (repeated submissions inside one conversation).
 
 ## 7. Reuse
 
