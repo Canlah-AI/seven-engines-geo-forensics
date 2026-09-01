@@ -1,0 +1,44 @@
+{
+  "upload_type": "dataset",
+  "title": "Same Question, Seven Engines: What Each AI Search Engine Cited — a GEO Source-Forensics Case Study",
+  "version": "1.2.0",
+  "publication_date": "2026-09-01",
+  "creators": [
+    {
+      "name": "Pang, Haoyang",
+      "affiliation": "Canlah AI",
+      "orcid": "0009-0009-7039-0394"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "description": "One identical question, in English and Chinese, put to seven AI search surfaces on the same night; every cited URL captured, fetched, and classified by a frozen deterministic codebook. Reports cross-engine source overlap (domain-level Jaccard 0.171 CN / 0.091 EN), the page types engines actually cite, and the uptake of self-published ranked listicles. Ships the classification code and the per-page dossiers, so the offline half of the analysis can be recomputed bit-for-bit by anyone: `python3 scripts/classify.py` re-derives all 116 published page_type labels. v1.2 corrects four Cloudflare-blocked pages that were analysed from the interstitial rather than their recovered text; see ERRATUM.md.",
+  "keywords": [
+    "generative engine optimization",
+    "GEO",
+    "AI search",
+    "search engine citations",
+    "source forensics",
+    "reproducibility",
+    "LLM citation",
+    "answer engine optimization"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://huggingface.co/datasets/CanlahAI/seven-engines-geo-forensics",
+      "relation": "isIdenticalTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.22103178",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "opendata"
+    }
+  ]
+}
