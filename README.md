@@ -2,7 +2,13 @@
 
 **A source-forensics case study for Generative Engine Optimization (GEO)**
 
-Canlah Research · Singapore · 2026-08-30 (v1.0) · 2026-08-31 (v1.1: logged-out ChatGPT replication, §3a) · License: CC BY 4.0 · Data, prompts, and classification code in this repository
+Canlah Research · Singapore · 2026-08-30 (v1.0) · 2026-08-31 (v1.1: logged-out ChatGPT replication, §3a) · 2026-09-01 (v1.2: **corrected** — see below) · License: CC BY 4.0 · Data, prompts, and classification code in this repository
+
+> ⚠️ **v1.2 corrects two numbers published in v1.0/v1.1.** Four Cloudflare-blocked pages were analysed from the
+> interstitial instead of their recovered text, so one self-published listicle was mis-typed as a vendor page.
+> Google-organic self-listicle uptake is **6/18, not 4/18**; the source profile is **11 vendor · 6 self-listicle · 1 third-party**.
+> Headline cross-engine similarity (Jaccard CN 0.171 / EN 0.091) is unaffected — it is computed over cited domains, not page types.
+> Full account, including how it was found and how to verify the fix: [**ERRATUM.md**](ERRATUM.md).
 
 ---
 
@@ -45,7 +51,7 @@ This is **one query, one night, one locale** — a forensic case study with a me
 
 1. **No shared source layer.** Across 71 unique pages, none was cited by ≥5 of 7 engines; the three best-covered pages reached 4 each. Mean pairwise top-10 domain Jaccard: 0.171 (CN), 0.091 (EN). Matrices: [`data/similarity.json`](data/similarity.json).
 2. **Sources diverged; brands recurred.** Engines cited largely different URLs while naming overlapping vendor sets (brand-level Jaccard between answer engines: 0–0.33, also in `similarity.json`). One hypothesis consistent with the data: a **second-order mention network** — many different publishers (listicles, directories, competitor pages) enumerate the same entities, so entity-level presence travels across engines even when no single URL does.
-3. **Self-published "Best X" listicles were taken up by exactly three surfaces in this run:** OpenAI web_search (3/9 citations), ChatGPT consumer (6/17), and Google organic (4/18 — top-10 entries, never #1). Zero uptake by Exa, Tavily, Google AI Mode, or Gemini. No engine visibly filtered the conflict of interest: every self-listicle we captured ranks its publisher first, and was cited anyway.
+3. **Self-published "Best X" listicles were taken up by exactly three surfaces in this run:** OpenAI web_search (3/9 citations), ChatGPT consumer (6/17), and Google organic (6/18 — top-10 entries, never #1). Zero uptake by Exa, Tavily, Google AI Mode, or Gemini. No engine visibly filtered the conflict of interest: every self-listicle we captured ranks its publisher first, and was cited anyway.
 4. **Structured data correlated with citation, and guarantees nothing.** 17/17 ChatGPT-cited and 16/18 Google-cited records carried JSON-LD — but AI Mode and Gemini also cited schema-free pages, bot-challenged pages, and one 404. Google's own documentation disclaims any guarantee. Treat schema as hygiene.
 5. **Word-sense disambiguation decided one engine entirely.** Gemini grounding resolved "GEO" to geospatial/GIS in both languages (16/16 sources), including pages updated days before the probe — freshness did not rescue the lost word-sense. If your category term is ambiguous, resolving the ambiguity on-page (full phrase, AI-search context terms) looks like a precondition for competing at all.
 
@@ -67,7 +73,7 @@ Implication for the per-engine reading in §4.5: the logged-in and logged-out Ch
 
 > **If you target this engine — working hypothesis from this run:** In this run, exact-match locally-anchored vendor service pages took 13/18 citation slots. Hypothesis to test: an exact-phrase, city-anchored service page may be the primary entry asset.
 
-**Observed source profile** (this case, n=18 citation records): 13 vendor service pages · 4 self-published listicles · 1 third-party listicle · 0 directories/media. 14 unique pages (slash-normalized), of which 7 were cited by no other engine in this run.
+**Observed source profile** (this case, n=18 citation records): 11 vendor service pages · 6 self-published listicles · 1 third-party listicle · 0 directories/media. 14 unique pages (slash-normalized), of which 7 were cited by no other engine in this run.
 
 **How it sources — documented mechanism.** Claims below come from primary documentation; each was re-checked by an adversarial verifier that opened the cited source (verdicts + reasons in [`data/claim_verification.json`](data/claim_verification.json)):
 

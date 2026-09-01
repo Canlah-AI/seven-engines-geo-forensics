@@ -14,5 +14,5 @@ Queries (verbatim):
 | Exa | POST /search `type=auto, numResults=10` |
 | Tavily | POST /search `max_results=10, include_answer=true` |
 
-Fetching: curl with desktop Chrome UA, 25s timeout, same night; 4 bot-walled pages recovered via Exa /contents; 3 URLs never yielded readable content and carry retrieval_status=unfetched.
+Fetching: curl with desktop Chrome UA, 25s timeout, same night; 4 bot-walled pages were re-fetched as plain text via Exa /contents. **Erratum (2026-09-01):** in v1.1 that recovered text was collected but never reached the analysis — the dossier builder read the Cloudflare interstitial instead, so those 4 pages entered v1.1 with 9–127 words and zero extracted entities. Corrected in v1.2; see ERRATUM.md; 3 URLs never yielded readable content and carry retrieval_status=unfetched.
 URL normalization and page-type codebook: `scripts/classify.py` (frozen before analysis of the reclassified data; applied uniformly, no manual overrides).
