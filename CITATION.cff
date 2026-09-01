@@ -1,11 +1,17 @@
 cff-version: 1.2.0
 message: "If you use this study or dataset, please cite it as below."
+type: dataset
 title: "Same Question, Seven Engines: What Each AI Search Engine Cited — and Working Hypotheses for Targeting Each"
+abstract: "One identical question, in English and Chinese, put to seven AI search surfaces on the same night; every cited URL captured, fetched, and classified by a frozen deterministic codebook. Reports cross-engine source overlap (domain-level Jaccard 0.171 CN / 0.091 EN), the page types engines actually cite, and the uptake of self-published ranked listicles. The offline half of the analysis is bit-reproducible: scripts/classify.py re-derives all 116 published page_type labels from the shipped per-page dossiers. v1.2 corrects four Cloudflare-blocked pages that were analysed from the interstitial rather than their recovered text; see ERRATUM.md."
 authors:
+  - family-names: "Pang"
+    given-names: "Haoyang"
+    affiliation: "Canlah AI"
+    orcid: "https://orcid.org/0009-0009-7039-0394"
   - name: "Canlah Research"
     website: "https://canlah.ai"
-date-released: "2026-08-30"
-version: "1.1"
+date-released: "2026-09-01"
+version: "1.2.0"
 license: CC-BY-4.0
 repository-code: "https://github.com/Canlah-AI/seven-engines-geo-forensics"
 keywords:
@@ -14,3 +20,4 @@ keywords:
   - AI search
   - search engine citations
   - source forensics
+  - reproducibility
