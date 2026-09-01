@@ -2,7 +2,7 @@
 
 **A source-forensics case study for Generative Engine Optimization (GEO)**
 
-Canlah Research · Singapore · 2026-08-30 (v1.0) · 2026-08-31 (v1.1: logged-out ChatGPT replication, §3a) · 2026-09-01 (v1.2: **corrected** — see below) · License: CC BY 4.0 · Data, prompts, and classification code in this repository
+Canlah Research · Singapore · 2026-08-30 (v1.0) · 2026-08-31 (v1.1: logged-out ChatGPT replication, §3a) · 2026-09-01 (v1.2: **corrected** — see below) · License: CC BY 4.0 · **DOI: [10.5281/zenodo.22225223](https://doi.org/10.5281/zenodo.22225223)** · Data, prompts, and classification code in this repository
 
 > ⚠️ **v1.2 corrects two numbers published in v1.0/v1.1.** Four Cloudflare-blocked pages were analysed from the
 > interstitial instead of their recovered text, so one self-published listicle was mis-typed as a vendor page.
