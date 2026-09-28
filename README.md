@@ -376,3 +376,8 @@ Cited — and Working Hypotheses for Targeting Each. https://canlah.ai
 ```
 
 *Questions, corrections, replications: admin@canlah.ai*
+
+## Related Canlah research
+
+- **[Singapore GEO Citation Probes, September 2026](https://canlah.ai/data/ai-citations-sg-2026/)** — what ChatGPT and Google AI Mode cited for 110 Singapore buyer questions (917 citation rows; CC BY 4.0; [GitHub](https://github.com/Canlah-AI/ai-citations-sg-2026), DOI [10.5281/zenodo.23005020](https://doi.org/10.5281/zenodo.23005020)).
+- **[GEO Playbook](https://canlah.ai/playbook/)** — the method we built on those measurements: a blueprint for each of 46 cited-page types ([agent-ready version](https://github.com/Canlah-AI/geo-playbook), DOI [10.5281/zenodo.23005022](https://doi.org/10.5281/zenodo.23005022)).
